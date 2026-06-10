@@ -1,0 +1,28 @@
+#homeScreen {
+  text-align: center;
+}
+
+#homeScreen h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+#homeScreen h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+#startButton {
+  padding: 20px 50px;
+
+  border: none;
+  border-radius: 15px;
+
+  font-size: 1.5rem;
+
+  transition: transform 0.3s ease;
+}
+
+#startButton:hover {
+  transform: scale(1.05);
+}

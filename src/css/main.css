@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #16002f, #320064, #003f88);
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}

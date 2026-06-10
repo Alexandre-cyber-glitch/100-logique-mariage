@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Question 1",
+    "type": "multiple-choice",
+    "difficultyPercent": 50,
+    "timer": 3,
+
+    "question": "Quel est le pays manquant ?",
+
+    "content": {
+      "type": "text",
+      "value": ["Portugal → ? → Norvège"]
+    },
+
+    "choices": ["Suède", "Danemark", "Finlande", "Islande"],
+
+    "correctAnswer": 0
+  },
+
+  {
+    "id": 2,
+    "title": "Question 2",
+    "type": "image-choice",
+    "difficultyPercent": 20,
+    "timer": 3,
+
+    "question": "Quelle photo représente le marié enfant ?",
+
+    "content": {
+      "type": "images",
+      "value": [
+        "assets/questions/q2/a.png",
+        "assets/questions/q2/b.png",
+        "assets/questions/q2/c.png"
+      ]
+    },
+
+    "choices": ["A", "B", "C"],
+
+    "correctAnswer": 2
+  }
+]
