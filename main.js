@@ -1,6 +1,8 @@
-require("electron-reload")(__dirname);
-
 const { app, BrowserWindow } = require("electron");
+
+if (!app.isPackaged) {
+  require("electron-reload")(__dirname);
+}
 
 function createWindow() {
   const win = new BrowserWindow({
