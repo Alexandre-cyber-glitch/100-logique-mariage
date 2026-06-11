@@ -47,11 +47,21 @@ function renderChoices(question) {
 
     const letter = String.fromCharCode(65 + index);
 
-    answerElement.innerHTML = `
-      <span class="answer-letter">${letter}</span>
-      <span class="answer-separator"></span>
-      <span class="answer-text">${choice.value}</span>
-    `;
+    if (choice.type === "text") {
+      answerElement.innerHTML = `
+    <span class="answer-letter">${letter}</span>
+    <span class="answer-separator"></span>
+    <span class="answer-text">${choice.value}</span>
+  `;
+    }
+
+    if (choice.type === "image") {
+      answerElement.innerHTML = `
+    <span class="answer-letter">${letter}</span>
+    <span class="answer-separator"></span>
+    <img class="answer-image" src="${choice.value}" />
+  `;
+    }
 
     answersDiv.appendChild(answerElement);
   });

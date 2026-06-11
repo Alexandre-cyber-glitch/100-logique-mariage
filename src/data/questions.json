@@ -8,7 +8,7 @@
 
     "content": {
       "type": "image",
-      "value": "assets/test.png"
+      "value": "assets/question1/test.png"
     },
 
     "choices": [
@@ -42,21 +42,21 @@
 
     "content": {
       "type": "image",
-      "value": "assets/questions/q2/question.png"
+      "value": "assets/question2/question2.png"
     },
 
     "choices": [
       {
         "type": "image",
-        "value": "assets/questions/q2/a.png"
+        "value": "assets/question2/answer1.png"
       },
       {
         "type": "image",
-        "value": "assets/questions/q2/b.png"
+        "value": "assets/question2/answer2.png"
       },
       {
         "type": "image",
-        "value": "assets/questions/q2/c.png"
+        "value": "assets/question2/answer3.png"
       }
     ],
 
