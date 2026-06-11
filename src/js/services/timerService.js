@@ -1,22 +1,39 @@
 let timerRunning = false;
-
 let intervalId = null;
 
-export function startTimer(duration) {
+const CIRCLE_LENGTH = 276;
+
+export function startTimer(duration = 30) {
   if (timerRunning) {
     return;
   }
 
+  const progressCircle = document.querySelector(".timer-progress");
+
+  if (!progressCircle) {
+    console.error("Cercle du timer introuvable");
+    return;
+  }
+
   timerRunning = true;
+
   let remaining = duration;
-  const timerElement = document.getElementById("timer");
-  timerElement.textContent = remaining;
+
   intervalId = setInterval(() => {
     remaining--;
-    timerElement.textContent = remaining;
+
+    const ratio = remaining / duration;
+    const offset = CIRCLE_LENGTH * (1 - ratio);
+
+    progressCircle.style.strokeDashoffset = offset;
+
     if (remaining <= 0) {
       clearInterval(intervalId);
+      intervalId = null;
       timerRunning = false;
+
+      progressCircle.style.strokeDashoffset = CIRCLE_LENGTH;
+
       console.log("Temps écoulé");
     }
   }, 1000);
@@ -25,14 +42,18 @@ export function startTimer(duration) {
 export function stopTimer() {
   if (intervalId) {
     clearInterval(intervalId);
-
     intervalId = null;
   }
+
   timerRunning = false;
 }
 
-export function resetTimer(duration = 30) {
+export function resetTimer() {
   stopTimer();
-  const timerElement = document.getElementById("timer");
-  timerElement.textContent = duration;
+
+  const progressCircle = document.querySelector(".timer-progress");
+
+  if (progressCircle) {
+    progressCircle.style.strokeDashoffset = 0;
+  }
 }

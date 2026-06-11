@@ -1,0 +1,58 @@
+#timerCircle {
+  width: 115px;
+  height: 115px;
+
+  position: relative;
+  z-index: 2;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #100020 35%, #6b00d7 68%, #ffffff 72%);
+
+  box-shadow: 0 0 25px rgba(160, 70, 255, 0.9);
+}
+
+#timerSvg {
+  position: absolute;
+  inset: 0;
+
+  transform: rotate(-90deg);
+}
+
+.timer-bg {
+  fill: none;
+
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 7;
+}
+
+.timer-progress {
+  fill: none;
+
+  stroke: white;
+  stroke-width: 7;
+  stroke-linecap: round;
+
+  filter: none;
+
+  stroke-dasharray: 276;
+  stroke-dashoffset: 0;
+
+  transition: stroke-dashoffset 1s linear;
+}
+
+#difficultyPercent {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffd86b;
+
+  font-size: 2rem;
+  font-weight: 900;
+
+  text-shadow: 0 0 8px black;
+}

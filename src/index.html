@@ -3,24 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <title>100% Logique Mariage</title>
+
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/question.css" />
+    <link rel="stylesheet" href="css/components/question-header.css" />
+    <link rel="stylesheet" href="css/components/timer-circle.css" />
   </head>
+
   <body>
-    <div id="homeScreen">
+    <div id="homeScreen" class="screen">
       <h1>100% LOGIQUE</h1>
       <h2>ÉDITION MARIAGE</h2>
       <button id="startButton">COMMENCER</button>
     </div>
 
-    <div id="questionScreen" style="display: none">
-      <div id="timer"></div>
-      <div id="difficultyPercent"></div>
-      <h1 id="questionTitle"></h1>
-      <p id="questionText"></p>
-      <div id="answers"></div>
+    <div id="questionScreen" class="screen hidden">
+      <div id="questionHeader">
+        <div id="timerCircle"></div>
+
+        <div id="questionBox">
+          <p id="questionText"></p>
+        </div>
+      </div>
+
+      <main id="questionMain">
+        <div id="questionImageFrame">
+          <img id="questionImage" />
+        </div>
+
+        <div id="answers"></div>
+      </main>
     </div>
+
     <script type="module" src="js/app.js"></script>
   </body>
 </html>

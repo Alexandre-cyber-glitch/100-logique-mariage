@@ -1,7 +1,7 @@
 import { gameState } from "../state/gameState.js";
 import { getQuestion } from "./questionService.js";
 import { showQuestion } from "../screens/question.js";
-import { startTimer } from "./timerService.js";
+import { startTimer, resetTimer } from "./timerService.js";
 
 export function startGame() {
   gameState.currentQuestionIndex = 0;
@@ -10,6 +10,7 @@ export function startGame() {
 export function loadCurrentQuestion() {
   const question = getQuestion(gameState.currentQuestionIndex);
   showQuestion(question);
+  resetTimer();
   gameState.questionState = "QUESTION";
 }
 export function nextQuestion() {
@@ -26,6 +27,10 @@ export function previousQuestion() {
 export function revealAnswer() {
   const question = getQuestion(gameState.currentQuestionIndex);
   const answers = document.querySelectorAll(".answer");
+  if (!question || answers.length === 0) {
+    console.error("Impossible de révéler la réponse");
+    return;
+  }
   answers[question.correctAnswer].classList.add("correct");
 }
 

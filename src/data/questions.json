@@ -1,42 +1,64 @@
 [
   {
     "id": 1,
-    "title": "Question 1",
-    "type": "multiple-choice",
     "difficultyPercent": 50,
-    "timer": 3,
+    "timer": 15,
 
-    "question": "Quel est le pays manquant ?",
+    "question": "Si on suit cette logique, quel est le pays manquant ?",
 
     "content": {
-      "type": "text",
-      "value": ["Portugal → ? → Norvège"]
+      "type": "image",
+      "value": "assets/test.png"
     },
 
-    "choices": ["Suède", "Danemark", "Finlande", "Islande"],
+    "choices": [
+      {
+        "type": "text",
+        "value": "Suède"
+      },
+      {
+        "type": "text",
+        "value": "Danemark"
+      },
+      {
+        "type": "text",
+        "value": "Finlande"
+      },
+      {
+        "type": "text",
+        "value": "Islande"
+      }
+    ],
 
     "correctAnswer": 0
   },
 
   {
     "id": 2,
-    "title": "Question 2",
-    "type": "image-choice",
     "difficultyPercent": 20,
-    "timer": 3,
+    "timer": 15,
 
     "question": "Quelle photo représente le marié enfant ?",
 
     "content": {
-      "type": "images",
-      "value": [
-        "assets/questions/q2/a.png",
-        "assets/questions/q2/b.png",
-        "assets/questions/q2/c.png"
-      ]
+      "type": "image",
+      "value": "assets/questions/q2/question.png"
     },
 
-    "choices": ["A", "B", "C"],
+    "choices": [
+      {
+        "type": "image",
+        "value": "assets/questions/q2/a.png"
+      },
+      {
+        "type": "image",
+        "value": "assets/questions/q2/b.png"
+      },
+      {
+        "type": "image",
+        "value": "assets/questions/q2/c.png"
+      }
+    ],
 
     "correctAnswer": 2
   }
